@@ -44,15 +44,19 @@ header nav a {
   line-height: 100%;
   transition: all 0.3s;
   position: relative;
+  overflow: hidden;
 }
 
 header nav a:hover {
   background-color: fade(@color_orange, 20%);
 }
 
-header nav a:hover:before,
 header nav a:hover:after {
-  opacity: 1;
+  left: 0%;
+}
+
+header nav a:hover:before {
+  right: 0%;
 }
 
 header nav a:before,
@@ -60,16 +64,17 @@ header nav a:after {
   content: "";
   position: absolute;
   top: calc(~'(100% - 2px)');
-  left: 0;
+  left: -100%;
   width: 100%;
   height: 2px;
   background-color: @color_orange;
-  opacity: 0;
   transition: all 0.3s;
 }
 
 header nav a:before {
   top: 0%;
+  right: -100%;
+  left: 0;
 }
 
 header a.action {
