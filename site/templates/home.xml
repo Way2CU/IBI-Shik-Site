@@ -9,7 +9,32 @@
 		</head>
 
 		<body>
-			<h1>It works!</h1>
+			<header>
+				<h1><cms:text constant="title"/></h1>
+				<nav>
+					<a href="#about">
+						<cms:text constant="menu_about"/>
+					</a>
+					<a href="#plan">
+						<cms:text constant="menu_plan"/>
+					</a>
+					<a href="#lecturers">
+						<cms:text constant="menu_lecturers"/>
+					</a>
+					<a href="#program">
+						<cms:text constant="menu_program"/>
+					</a>
+					<a href="#map">
+						<cms:text constant="menu_map"/>
+					</a>
+					<a href="#gallery">
+						<cms:text constant="menu_gallery"/>
+					</a>
+				</nav>
+				<a href="javascript:void(0)" class="action">
+					<cms:text constant="label_action"/>
+				</a>
+			</header>
 		</body>
 	</html>
 </document>
