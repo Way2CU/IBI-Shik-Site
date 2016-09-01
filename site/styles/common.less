@@ -24,3 +24,47 @@
 @color_grey: #7f8c8d;
 @color_light_grey: #bdc3c7;
 @color_bright_grey: #ecf0f1;
+
+button,
+.action {
+  display: inline-block;
+  text-decoration: none;
+  padding: 1.5em 1.5em;
+  background-color: @color_orange;
+  color: white;
+  font-weight: 700;
+  border: 2px solid white;
+  border-radius: 10px;
+  box-shadow: 0px 0px 8px fade(@color_text, 30%);
+  transition: all 0.3s;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.action:after,
+.action:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background-color: darken(@color_orange, 5%);
+  transition: all 0.3s;
+  z-index: -1;
+}
+
+.action:after {
+  left: auto;
+  right: -100%;
+}
+
+button:hover:before,
+.action:hover:before {
+  left: 0%;
+}
+
+button:hover:after,
+.action:hover:after {
+  right: 0%;
+}
