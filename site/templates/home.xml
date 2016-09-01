@@ -31,10 +31,18 @@
 						<cms:text constant="menu_gallery"/>
 					</a>
 				</nav>
-				<a href="javascript:void(0)" class="action">
+				<a href="javascript:void(0)" class="action"><cms:text constant=""/>
 					<cms:text constant="label_action"/>
 				</a>
 			</header>
+			<!-- section intro -->
+			<section class="intro">
+				<img src="_BASEURL.'/site/images/logo.svg'"  alt="logo" cms:eval="src"/>
+				<p><cms:text constant="title"/></p>
+				<a href="javascript:void(0)" class="action">
+					<cms:text constant="label_action"/>
+				</a>
+			</section>
 		</body>
 	</html>
 </document>
