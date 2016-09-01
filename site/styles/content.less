@@ -44,3 +44,114 @@ section.intro a.action {
   font-size: 1.5em;
   padding: 1em 2em;
 }
+
+section#about article,
+section#about div.form_container {
+  display: inline-block;
+  vertical-align: top;
+  box-sizing: border-box;
+  width: 45%;
+  overflow: hidden;
+}
+
+section#about div.form_container {
+  margin-right: 10%;
+  text-align: center;
+  border: 1px solid @color_bright_grey;
+  border-radius: 10px;
+}
+
+section#about div.form_container h4 {
+  margin: 0;
+  padding: 1em 0em;
+  background-color: @color_bright_grey;
+}
+
+section#about div.form_container span {
+  display: block;
+  padding: 1em 0em;
+}
+
+section#about div.form_container form {
+  padding: 1em 1em;
+}
+
+section#about div.form_container form label {
+  display: block;
+  margin-bottom: 1em;
+}
+
+section#about div.form_container form label input {
+  width: 100%;
+  padding: 1em 0.2em;
+  border: 2px solid @color_light_grey;
+  box-sizing: border-box;
+  transition: all 0.3s;
+}
+
+section#about div.form_container form label.checkbox input {
+  display: inline-block;
+  vertical-align: middle;
+  width: 1.5em;
+  height: 1.5em;
+}
+
+section#about div.form_container form label input:hover {
+  border-color: lighten(@color_orange, 30%);
+}
+
+section#about div.form_container form label input:focus {
+  border-color: @color_orange;
+}
+
+section#about div.form_container form label span {
+  font-size: 0em;
+}
+
+section#about div.form_container form label.checkbox span {
+  display: inline-block;
+  vertical-align: middle;
+  text-align: right;
+  box-sizing: border-box;
+  padding: 0em 0.2em;
+  font-size: 1em;
+  width: calc(~'(100% - 1.5em)');
+}
+
+section#about div.form_container form div.controls button {
+  cursor: pointer;
+  padding: 1.2em 3em;
+}
+
+section#about article h2 {
+  display: inline-block;
+  color: @color_orange;
+  position: relative;
+}
+
+section#about article h2:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 105%;
+  width: 500px;
+  height: 1px;
+  transform: translatey(-50%);
+  background-color: @color_orange;
+}
+
+section#about article p {
+  font-size: 1.3em;
+}
+
+section#about article p:first-of-type {
+  margin-top: 0;
+}
+
+section#about article img {
+  border: 1px solid @color_bright_grey;
+}
+
+section#about article img:nth-of-type(2) {
+  margin: 0em 0.5em;
+}
