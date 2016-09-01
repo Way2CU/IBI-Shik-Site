@@ -1,0 +1,19 @@
+<document>
+  <li>
+    <img 
+      src="gallery::getThumbnailById($params['id'], null, 280, Thumbnail::CONSTRAIN_HEIGHT)"
+      alt="$params['title'][$language]"
+      cms:eval="src,alt"
+      />
+    <h3><cms:var param="title" multilanguage="yes"/></h3>
+    <cms:markdown param="description" multilanguage="yes"/>
+
+    <cms:module
+      name="articles"
+      action="show"
+      text_id="$params['text_id']"
+      template="parts/lecture_information.xml"
+      cms:eval="text_id"
+      />
+  </li>
+</document>

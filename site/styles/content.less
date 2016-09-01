@@ -7,7 +7,7 @@
  */
 
 section {
-  padding: 1em calc(~'(100% - 1200px)' / 2);
+  padding: 2em calc(~'(100% - 1200px)' / 2);
 }
 
 section.intro {
@@ -123,12 +123,14 @@ section#about div.form_container form div.controls button {
   padding: 1.2em 3em;
 }
 
+section#lecturers h2,
 section#about article h2 {
   display: inline-block;
   color: @color_orange;
   position: relative;
 }
 
+section#lecturers h2:after,
 section#about article h2:after {
   content: "";
   position: absolute;
@@ -138,6 +140,10 @@ section#about article h2:after {
   height: 1px;
   transform: translatey(-50%);
   background-color: @color_orange;
+}
+
+section#lecturers h2:after {
+  width: 1200px;
 }
 
 section#about article p {
@@ -154,4 +160,75 @@ section#about article img {
 
 section#about article img:nth-of-type(2) {
   margin: 0em 0.5em;
+}
+
+section#plan {
+  padding: 10em calc(~'(100% - 700px)' / 2);
+  background-image: url(../images/subject-background.jpg);
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: 1920px 500px;
+  text-align: center;
+}
+
+section#plan h2 {
+  color: @color_orange;
+}
+
+section#plan p {
+  font-size: 1.3em;
+}
+
+/*
+ * Lecturers list
+ */
+
+section#lecturers {
+  padding: 0;
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+}
+
+section#lecturers ul {
+  display: block;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+section#lecturers ul li {
+  display: inline-block;
+  vertical-align: top;
+  box-sizing: border-box;
+  text-align: center;
+  width: 280px;
+  background-color: @color_blue;
+  color: white;
+}
+
+section#lecturers ul li {
+  margin-right: calc(~'(20px * 4) / 3');
+}
+
+section#lecturers ul li:nth-of-type(1) {
+  margin-right: 0;
+}
+
+section#lecturers ul li h3 {
+  margin: 0;
+}
+
+section#lecturers ul li p:first-of-type {
+  border-bottom: 1px solid white;
+  margin: 0 1em;
+  padding-bottom: 1em;
+}
+
+section#lecturers ul li a {
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  padding-bottom: 0.5em;
 }

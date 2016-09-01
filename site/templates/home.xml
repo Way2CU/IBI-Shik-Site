@@ -43,6 +43,7 @@
 					<cms:text constant="label_action"/>
 				</a>
 			</section>
+
 			<!-- section about -->
 			<section id="about">
 				<cms:module
@@ -60,6 +61,31 @@
 						/>
 					<span><cms:text constant="signup_notification"/></span>
 				</div>
+			</section>
+
+			<!-- section plan -->
+			<section id="plan">
+				<cms:module
+					name="articles"
+					action="show"
+					text_id="plan"
+					template="stock/article_generic.xml"
+					>
+					<param name="title" value=""/>
+				</cms:module>
+			</section>
+
+			<!-- section lecturers -->
+			<section id="lecturers">
+				<h2><cms:text constant="menu_lecturers"/></h2>
+				<ul>
+					<cms:module
+						name="gallery"
+						action="show_image_list"
+						group="lecturers"
+						template="parts/lecturers.xml"
+						/>
+				</ul>
 			</section>
 		</body>
 	</html>
