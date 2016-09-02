@@ -237,7 +237,7 @@ section#lecturers ul.lecture li a {
   display: inline-block;
   text-decoration: none;
   color: white;
-  padding-bottom: 0.5em;
+  padding: 1em 2em;
   transition: all 0.3s;
 }
 
@@ -292,6 +292,14 @@ section#lecturers ul.features li {
   width: 33.3%;
 }
 
+section#lecturers ul.features li:hover span {
+  border-radius: 0;
+}
+
+section#lecturers ul.features li:hover svg {
+  transform: rotate(360deg);
+}
+
 section#lecturers ul.features li span {
   display: block;
   margin-left: auto;
@@ -301,12 +309,14 @@ section#lecturers ul.features li span {
   height: 3em;
   background-color: @color_orange;
   border-radius: 50%;
+  transition: all 0.3s;
 }
 
 section#lecturers ul.features li span svg {
   width: 3em;
   height: 3em;
   fill: white;
+  transition: all 0.3s;
 }
 
 section#lecturers ul.features li h4 {
