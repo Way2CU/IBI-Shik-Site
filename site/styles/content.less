@@ -326,4 +326,68 @@ section#lecturers ul.features li h4 {
 section#lecturers ul.features li p {
   margin: 0;
   padding: 0em 3em;
+  color: @color_light_grey;
+}
+
+/**
+ * Program list
+ */
+ul#program {
+  margin: 0;
+  padding: 0;
+  padding-top: 6em;
+  list-style-type: none;
+}
+
+ul#program li {
+  display: inline-block;
+  vertical-align: top;
+  box-sizing: border-box;
+  text-align: center;
+  width: 20%;
+  position: relative;
+}
+
+ul#program li:hover:before {
+  transform: translatex(-50%) scale(1.4);
+  background-color: @color_orange;
+  border-color: @color_light_grey;
+}
+
+ul#program li:before {
+  content: "";
+  position: absolute;
+  top: -2em;
+  left: 50%;
+  width: 1em;
+  height: 1em;
+  transform: translatex(-50%);
+  background-color: white;
+  border-radius: 50%;
+  border: 1px solid @color_orange;
+  transition: all 0.3s;
+}
+
+ul#program li:first-of-type:after {
+  content: "";
+  position: absolute;
+  top: -1.5em;
+  right: calc(~'(50% + 0.5em)');
+  width: 960px;
+  height: 1px;
+  background-color: @color_orange;
+}
+
+ul#program li h4,
+ul#program li p {
+  margin: 0;
+}
+
+ul#program li h4 {
+  color: @color_light_grey;
+}
+
+ul#program li strong {
+  display: block;
+  padding: 0.2em 0em;
 }
