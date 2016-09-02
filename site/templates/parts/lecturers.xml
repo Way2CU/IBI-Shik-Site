@@ -8,6 +8,10 @@
     <h3><cms:var param="title" multilanguage="yes"/></h3>
     <cms:markdown param="description" multilanguage="yes"/>
 
+    <a href="javascript:void(0)">
+      <cms:text constant="additional_information"/>
+    </a>
+
     <cms:module
       name="articles"
       action="show"

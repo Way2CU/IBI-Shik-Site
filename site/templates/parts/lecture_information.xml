@@ -1,5 +1,5 @@
 <document>
-  <a href="#" data-tooltip="$params['content'][$language]" cms:eval="data-tooltip">
-    <cms:text constant="additional_information"/>
-  </a>
+  <div class="information">
+    <cms:markdown param="content" multilanguage="yes"/>
+  </div>
 </document>
