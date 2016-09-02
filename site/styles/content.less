@@ -191,7 +191,8 @@ section#lecturers {
   overflow: hidden;
 }
 
-section#lecturers ul {
+section#lecturers ul.features,
+section#lecturers ul.lecture {
   display: block;
   margin: 0;
   padding: 0;
@@ -199,7 +200,12 @@ section#lecturers ul {
   position: relative;
 }
 
-section#lecturers ul li {
+
+section#lecturers ul.features {
+  padding-top: 4em;
+}
+
+section#lecturers ul.lecture li {
   display: inline-block;
   vertical-align: top;
   box-sizing: border-box;
@@ -209,25 +215,25 @@ section#lecturers ul li {
   color: white;
 }
 
-section#lecturers ul li {
+section#lecturers ul.lecture li {
   margin-right: calc(~'(20px * 4) / 3');
 }
 
-section#lecturers ul li:nth-of-type(1) {
+section#lecturers ul.lecture li:nth-of-type(1) {
   margin-right: 0;
 }
 
-section#lecturers ul li h3 {
+section#lecturers ul.lecture li h3 {
   margin: 0;
 }
 
-section#lecturers ul li > p:first-of-type {
+section#lecturers ul.lecture li > p:first-of-type {
   border-bottom: 1px solid white;
   margin: 0 1em;
   padding-bottom: 1em;
 }
 
-section#lecturers ul li a {
+section#lecturers ul.lecture li a {
   display: inline-block;
   text-decoration: none;
   color: white;
@@ -235,17 +241,17 @@ section#lecturers ul li a {
   transition: all 0.3s;
 }
 
-section#lecturers ul li a:hover {
+section#lecturers ul.lecture li a:hover {
   color: @color_orange;
 }
 
-section#lecturers ul li a:hover + div.information {
+section#lecturers ul.lecture li a:hover + div.information {
   opacity: 1;
   visibility: visible;
   transform: translate(-50%, -50%) scale(1);
 }
 
-section#lecturers ul li div.information {
+section#lecturers ul.lecture li div.information {
   position: absolute;
   text-align: right;
   padding: 1em;
@@ -262,7 +268,7 @@ section#lecturers ul li div.information {
   transition: all 0.5s;
 }
 
-section#lecturers ul li div.information:before {
+section#lecturers ul.lecture li div.information:before {
   content: "";
   position: absolute;
   top: -1.5em;
@@ -272,4 +278,42 @@ section#lecturers ul li div.information:before {
   background-color: white;
   transform: rotate(45deg);
   z-index: -1;
+}
+
+/**
+ * Features list
+ */
+
+section#lecturers ul.features li {
+  display: inline-block;
+  vertical-align: top;
+  text-align: center;
+  box-sizing: border-box;
+  width: 33.3%;
+}
+
+section#lecturers ul.features li span {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1em;
+  width: 3em;
+  height: 3em;
+  background-color: @color_orange;
+  border-radius: 50%;
+}
+
+section#lecturers ul.features li span svg {
+  width: 3em;
+  height: 3em;
+  fill: white;
+}
+
+section#lecturers ul.features li h4 {
+  margin-bottom: 0;
+}
+
+section#lecturers ul.features li p {
+  margin: 0;
+  padding: 0em 3em;
 }
