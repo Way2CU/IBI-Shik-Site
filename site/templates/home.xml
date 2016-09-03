@@ -35,6 +35,7 @@
 					<cms:text constant="label_action"/>
 				</a>
 			</header>
+			
 			<!-- section intro -->
 			<section class="intro">
 				<img src="_BASEURL.'/site/images/logo.svg'"  alt="logo" cms:eval="src"/>
@@ -111,6 +112,7 @@
 					</cms:module>
 				</ul>
 			</section>
+
 			<!-- location section -->
 			<section id="map">
 				<h2><cms:text constant="title_location"/></h2>
@@ -129,6 +131,7 @@
 					cms:eval="src"
 					/>
 			</section>
+
 			<!-- video section -->
 			<section id="video">
 				<h2><cms:text constant="title_video"/></h2>
@@ -143,6 +146,16 @@
 						enable_api="1"
 						/>
 				</div>
+			</section>
+
+			<!-- section gallery -->
+			<section id="gallery">
+				<cms:module
+					name="gallery"
+					action="show_image_list"
+					group="gallery"
+					template="parts/image.xml"
+					/>
 			</section>
 		</body>
 	</html>
