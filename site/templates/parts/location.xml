@@ -13,7 +13,6 @@
         class="waze"
         href="waze://?q=רחוב אחוזת בית 2 ,תל-אביב&amp;navigate=yes'"
         target="_blank"
-        cms:eval="href"
         >
         <cms:svg file="site-sprite.svg" symbol="waze"/>
       </a>

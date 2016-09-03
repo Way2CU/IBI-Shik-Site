@@ -129,6 +129,21 @@
 					cms:eval="src"
 					/>
 			</section>
+			<!-- video section -->
+			<section id="video">
+				<h2><cms:text constant="title_video"/></h2>
+				<div class="video_wrap">
+					<cms:module
+						name="youtube"
+						action="show"
+						text_id="video"
+						embed="1"
+						width="650"
+						height="432"
+						enable_api="1"
+						/>
+				</div>
+			</section>
 		</body>
 	</html>
 </document>

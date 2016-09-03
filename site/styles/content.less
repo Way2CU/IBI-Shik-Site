@@ -123,6 +123,7 @@ section#about div.form_container form div.controls button {
   padding: 1.2em 3em;
 }
 
+section#video h2,
 section#map h2,
 section#lecturers h2,
 section#about article h2 {
@@ -131,6 +132,7 @@ section#about article h2 {
   position: relative;
 }
 
+section#video h2:after,
 section#map h2:after,
 section#lecturers h2:after,
 section#about article h2:after {
@@ -144,6 +146,7 @@ section#about article h2:after {
   background-color: @color_orange;
 }
 
+section#video h2:after,
 section#map h2:after,
 section#lecturers h2:after {
   width: 1200px;
@@ -186,6 +189,7 @@ section#plan p {
  * Lecturers list
  */
 
+section#video,
 section#map,
 section#lecturers {
   padding: 0;
@@ -194,6 +198,10 @@ section#lecturers {
   margin-left: auto;
   margin-right: auto;
   overflow: hidden;
+}
+
+section#map {
+  padding-bottom: 0;
 }
 
 section#lecturers ul.features,
@@ -447,4 +455,8 @@ a.google:hover {
 a.waze svg {
   width: 2em;
   height: 2em;
+}
+
+section#video div.video_wrap {
+  text-align: center;
 }
