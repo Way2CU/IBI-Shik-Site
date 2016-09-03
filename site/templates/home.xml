@@ -35,7 +35,7 @@
 					<cms:text constant="label_action"/>
 				</a>
 			</header>
-			
+
 			<!-- section intro -->
 			<section class="intro">
 				<img src="_BASEURL.'/site/images/logo.svg'"  alt="logo" cms:eval="src"/>
@@ -157,6 +157,24 @@
 					template="parts/image.xml"
 					/>
 			</section>
+
+			<!-- Bottom section of the site -->
+			<footer>
+				<img src="_BASEURL.'/site/images/logo.svg'"  alt="logo" cms:eval="src"/>
+				<p><cms:text constant="title"/></p>
+				<div>
+					<cms:text constant="title_form"/>
+					<a href="javascript:void(0)" class="action">
+						<cms:text constant="label_action"/>
+					</a>
+				</div>
+				<!-- copyright -->
+				<cms:template file="stock/copyright.xml">
+					<param name="holder" value="copyright_holder"/>
+					<param name="text" value="copyright_text"/>
+					<param name="light" value=""/>
+				</cms:template>
+			</footer>
 		</body>
 	</html>
 </document>
