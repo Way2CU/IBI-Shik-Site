@@ -6,9 +6,8 @@
     <cms:module
       name="gallery"
       action="show_group"
-      group_id="$params['gallery']" 
+      text_id="partners" 
       template="parts/article_images_title.xml"
-      cms:eval="group_id"
       />
     <!-- article gallery images -->
     <div class="images">
