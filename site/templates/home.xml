@@ -111,6 +111,24 @@
 					</cms:module>
 				</ul>
 			</section>
+			<!-- location section -->
+			<section id="map">
+				<h2><cms:text constant="title_location"/></h2>
+				<br/>
+				<div class="location_container">
+					<cms:module
+						name="articles"
+						action="show_list"
+						group="location"
+						template="parts/location.xml"
+						/>
+				</div>
+				<img 
+					src="_BASEURL.'/site/images/map.jpg'"  
+					alt="map"
+					cms:eval="src"
+					/>
+			</section>
 		</body>
 	</html>
 </document>

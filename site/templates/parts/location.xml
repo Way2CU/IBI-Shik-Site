@@ -1,0 +1,27 @@
+<document>
+  <cms:if condition="$params['text_id'] == 'address'">
+    <div>
+      <cms:markdown param="content" multilanguage="yes"/>
+      <a 
+        href="https://www.google.co.il/maps/place/אחוזת+בית+2,+תל+אביב+יפו%E2%80%AD/@32.0644031,34.7725202,17z/"
+        target="_blank"
+        class="google"
+        >
+        <cms:text constant="button_google_map"/>
+      </a>
+      <a 
+        class="waze"
+        href="waze://?q=רחוב אחוזת בית 2 ,תל-אביב&amp;navigate=yes'"
+        target="_blank"
+        cms:eval="href"
+        >
+        <cms:svg file="site-sprite.svg" symbol="waze"/>
+      </a>
+    </div>
+  </cms:if>
+  <cms:if condition="!$params['text_id'] == 'address'">
+    <div>
+      <cms:markdown param="content" multilanguage="yes"/>
+    </div>
+  </cms:if>
+</document>

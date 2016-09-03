@@ -123,6 +123,7 @@ section#about div.form_container form div.controls button {
   padding: 1.2em 3em;
 }
 
+section#map h2,
 section#lecturers h2,
 section#about article h2 {
   display: inline-block;
@@ -130,6 +131,7 @@ section#about article h2 {
   position: relative;
 }
 
+section#map h2:after,
 section#lecturers h2:after,
 section#about article h2:after {
   content: "";
@@ -142,6 +144,7 @@ section#about article h2:after {
   background-color: @color_orange;
 }
 
+section#map h2:after,
 section#lecturers h2:after {
   width: 1200px;
 }
@@ -183,6 +186,7 @@ section#plan p {
  * Lecturers list
  */
 
+section#map,
 section#lecturers {
   padding: 0;
   padding-bottom: 2em;
@@ -391,4 +395,56 @@ ul#program li h4 {
 ul#program li strong {
   display: block;
   padding: 0.2em 0em;
+}
+
+/**
+ * Location articles
+ */
+
+section#map img {
+  display: inline-block;
+  vertical-align: top;
+  width: 700px;
+}
+
+section#map div.location_container {
+  display: inline-block;
+  vertical-align: top;
+  padding-left: 1em;
+  box-sizing: border-box;
+  width: calc(~'(100% - 700px)');
+}
+
+section#map div.location_container div {
+  display: block;
+  border-bottom: 1px solid @color_light_grey;
+}
+
+a.waze,
+a.google {
+  display: inline-block;
+  vertical-align: top;
+  text-decoration: none;
+  padding: 1em 1.5em;
+  background-color: white;
+  color: @color_orange;
+  border: 1px solid @color_orange;
+  transition: all 0.3s;
+}
+
+a.waze {
+  padding: 0.45em 2.5em;
+  margin-right: 1em;
+  margin-bottom: 1em;
+}
+
+a.waze:hover,
+a.google:hover {
+  background-color: @color_orange;
+  color: white;
+}
+
+a.waze svg {
+  width: 2em;
+  height: 2em;
 }
