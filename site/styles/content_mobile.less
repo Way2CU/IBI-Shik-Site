@@ -203,6 +203,10 @@ section#plan p {
   font-size: 1em;
 }
 
+section#lecturers {
+  padding: 0;
+}
+
 section#lecturers ul.features,
 section#lecturers ul.lecture {
   display: block;
@@ -219,13 +223,16 @@ section#lecturers ul.lecture li {
   margin-bottom: 1em;
   box-sizing: border-box;
   text-align: center;
-  width: 280px;
   background-color: @color_blue;
   color: white;
 }
 
 section#lecturers ul.lecture li:last-of-type {
   margin-bottom: 0;
+}
+
+section#lecturers ul.lecture li img {
+  padding-top: 1em;
 }
 
 section#lecturers ul.lecture li h3 {
@@ -260,7 +267,7 @@ section#lecturers ul.lecture li a svg {
   transition: all 0.3s;
 }
 
-section#lecturers ul.lecture li a:hover + div.information {
+section#lecturers ul.lecture li div.information.show {
   opacity: 1;
   visibility: visible;
   max-height: 500px;
@@ -275,6 +282,13 @@ section#lecturers ul.lecture li div.information {
   visibility: hidden;
   color: @color_text;
   transition: all 0.3s;
+}
+
+section#lecturers ul.lecture li div.information a {
+  text-decoration: none;
+  color: @color_orange;
+  padding: 0.5em;
+  font-size: 1.5em;
 }
 
 section#lecturers ul.features li {

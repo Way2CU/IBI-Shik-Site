@@ -62,10 +62,6 @@ Site.on_load = function() {
 	if (Site.is_mobile()) 
 		Site.mobile_menu = new Caracal.MobileMenu();
 
-	// create lightbox for gallery images
-	if (!Site.is_mobile()) {
-		Site.lightbox = new LightBox('a.image', false, false, true);
-
 	// create handler for information links
 	var information_links = document.querySelectorAll('a.information');
 	for(var i = 0; i <information_links.length; i++) {
@@ -77,6 +73,10 @@ Site.on_load = function() {
 	for(var i = 0; i <button_close.length; i++) {
 		button_close[i].addEventListener('click', Site.handle_close_information);
 	}
+
+	// create lightbox for gallery images
+	if (!Site.is_mobile()) {
+		Site.lightbox = new LightBox('a.image', false, false, true);
 
 		// create dialog for form
 		Site.dialog = new Dialog();
