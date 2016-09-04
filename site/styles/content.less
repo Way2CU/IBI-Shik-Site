@@ -69,11 +69,12 @@ section#about div.form_container h4 {
 
 section#about div.form_container span {
   display: block;
-  padding: 1em 0em;
+  padding: 1em 2em;
 }
 
 div.dialog_form span {
-  padding: 0em 0.5em;
+  display: inline-block;
+  padding: 0.5em 0.5em;
 }
 
 div.dialog_form form,
@@ -523,11 +524,19 @@ section#gallery a.image img {
 /**
  * Dialog form
  */
+div.dialog {
+  width: 600px;
+}
 
 div.dialog.visible {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  width: 600px;
+}
+
+div.dialog-background.visible {
+  opacity: 0.9;
 }
 
 div.dialog div.title {
@@ -536,6 +545,7 @@ div.dialog div.title {
 }
 
 div.dialog div.command_bar a {
-  background-color: @color_orange;
-  
+  background-color: white;
+  border: 1px solid @color_blue;
+  color: @color_blue;
 }

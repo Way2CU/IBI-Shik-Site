@@ -56,12 +56,13 @@
 					/>
 				<div class="form_container">
 					<h4><cms:text constant="title_form"/></h4>
+					<span><cms:text constant="signup_notification"/></span>
 					<cms:module
 						name="contact_form"
 						action="show"
 						text_id="contact"
 						/>
-					<span><cms:text constant="signup_notification"/></span>
+					<span><cms:text constant="signup_notification2"/></span>
 				</div>
 			</section>
 
@@ -161,12 +162,13 @@
 
 			<!-- Dialog form -->
 			<div class="dialog_form">
+					<span><cms:text constant="signup_notification"/></span>
 					<cms:module
 						name="contact_form"
 						action="show"
 						text_id="contact"
 						/>
-					<span><cms:text constant="signup_notification"/></span>
+					<span><cms:text constant="signup_notification2"/></span>
 			</div>
 
 			<!-- Bottom section of the site -->
