@@ -1,0 +1,65 @@
+/**
+ * Footer Style Sheet
+ * IBI-Shik 2016
+ *
+ * Copyright (c) 2016. by Way2CU, http://way2cu.com
+ * Authors:Tal Reznic
+ */
+
+footer {
+  text-align: center;
+  background-color: @color_text;
+}
+
+footer div.footer_content {
+  padding: 40px calc(~'(100% - 1200px)' / 2);
+  background-image: url(../images/footer-background.jpg);
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: 1920px 850px;
+  min-height: 770px;
+  position: relative;
+}
+
+footer div.footer_content img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 30%;
+}
+
+footer div.footer_content p {
+  font-size: 2.5em;
+}
+
+footer div.footer_content p strong {
+  display: none;
+}
+
+footer div.footer_content div.sign {
+  position: absolute;
+  padding: 2em 3em;
+  bottom: 100px;
+  left: 50%;
+  transform: translatex(-50%);
+  background-color: fade(@color_text, 60%);
+}
+
+footer div.footer_content div.sign span {
+  display: block;
+  padding-bottom: 0.5em;
+  font-size: 2em;
+  font-weight: 700;
+  color: white;
+}
+
+footer div.copyright {
+  display: inline-block;
+  color: white;
+}
+
+footer div.copyright a {
+  color: white;
+}
+
+

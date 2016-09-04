@@ -160,13 +160,15 @@
 
 			<!-- Bottom section of the site -->
 			<footer>
-				<img src="_BASEURL.'/site/images/logo.svg'"  alt="logo" cms:eval="src"/>
-				<p><cms:text constant="title"/></p>
-				<div>
-					<cms:text constant="title_form"/>
-					<a href="javascript:void(0)" class="action">
-						<cms:text constant="label_action"/>
-					</a>
+				<div class="footer_content">
+					<img src="_BASEURL.'/site/images/logo.svg'"  alt="logo" cms:eval="src"/>
+					<p><cms:text constant="title"/></p>
+					<div class="sign">
+						<span><cms:text constant="title_form"/></span>
+						<a href="javascript:void(0)" class="action">
+							<cms:text constant="label_action"/>
+						</a>
+					</div>
 				</div>
 				<!-- copyright -->
 				<cms:template file="stock/copyright.xml">
