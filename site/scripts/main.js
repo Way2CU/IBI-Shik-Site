@@ -51,6 +51,9 @@ Site.is_mobile = function() {
 Site.on_load = function() {
 	if (Site.is_mobile())
 		Site.mobile_menu = new Caracal.MobileMenu();
+
+	// create lightbox for gallery images
+	Site.lightbox = new LightBox('a.image',  false,  false,  true);
 };
 
 
