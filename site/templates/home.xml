@@ -159,6 +159,16 @@
 					/>
 			</section>
 
+			<!-- Dialog form -->
+			<div class="dialog_form">
+					<cms:module
+						name="contact_form"
+						action="show"
+						text_id="contact"
+						/>
+					<span><cms:text constant="signup_notification"/></span>
+			</div>
+
 			<!-- Bottom section of the site -->
 			<footer>
 				<div class="footer_content">

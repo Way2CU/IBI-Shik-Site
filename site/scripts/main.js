@@ -53,7 +53,22 @@ Site.on_load = function() {
 		Site.mobile_menu = new Caracal.MobileMenu();
 
 	// create lightbox for gallery images
-	Site.lightbox = new LightBox('a.image',  false,  false,  true);
+	Site.lightbox = new LightBox('a.image', false, false, true);
+
+	// create dialog for form
+	Site.dialog = new Dialog();
+	Site.dialog
+		.setTitle(language_handler.getText(null, 'title_form'))
+		.addClass('custom')
+		.setContentFromDOM('div.dialog_form');
+
+	// function for showing contact form
+	var action_links = document.querySelectorAll('a.action');
+	for(var i = 0; i < action_links.length; i++) {
+		action_links[i].addEventListener('click', function() {
+			Site.dialog.show();
+		})
+	}
 };
 
 
