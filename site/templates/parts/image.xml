@@ -1,7 +1,7 @@
 <document>
   <a class="image" href="$params['image']" cms:eval="href">
     <img 
-      src="gallery::getThumbnailById($params['id'], null, 317,Thumbnail::CONSTRAIN_HEIGHT)"
+      src="gallery::getThumbnailById($params['id'], null, _DESKTOP_VERSION ? 317 : 150,Thumbnail::CONSTRAIN_HEIGHT)"
       alt="$params['title'][$language]"
       cms:eval="src,alt"
       />

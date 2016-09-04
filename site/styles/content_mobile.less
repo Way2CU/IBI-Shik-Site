@@ -1,41 +1,31 @@
 /**
- * Content Style Sheet
- * IBI - Shik
+ * Content Mobile Style Sheet
+ * IBI-Shik 2016
  *
  * Copyright (c) 2016. by Way2CU, http://way2cu.com
  * Authors:Tal Reznic
  */
 
-section#gallery:target,
-section#map:target,
-section#lecturers:target,
-section#about:target {
-  padding-top: 6em;
-}
-
-ul#program:target {
-  padding-top: 8em;
-}
-
 section {
-  padding: 2em calc(~'(100% - 1200px)' / 2);
+  padding: 1em 0.5em;
 }
 
 section.intro {
+  padding: 0;
+  padding-top: 2.5em;
   text-align: center;
-  padding-top: 8em;
-  padding-bottom: 8em;
-  background-image: url(../images/header-background.jpg);
+  background-image: url(../images/mobile-header.jpg);
   background-repeat: no-repeat;
   background-position: center top;
-  background-size: 1920px 700px;
+  background-size: 100% auto;
+  height: calc(~'(100vw * 1.25 - 2.5em)');
 }
 
 section.intro img {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 30%;
+  width: 45%;
 }
 
 section.intro p {
@@ -44,7 +34,7 @@ section.intro p {
   margin-left: auto;
   margin-right: auto;
   padding: 0.5em 0em;
-  font-size: 3em;
+  font-size: 1.2em;
 }
 
 section.intro p strong {
@@ -52,21 +42,19 @@ section.intro p strong {
 }
 
 section.intro a.action {
-  font-size: 1.5em;
+  font-size: 1em;
   padding: 1em 2em;
 }
 
 section#about article,
 section#about div.form_container {
-  display: inline-block;
+  display: block;
   vertical-align: top;
   box-sizing: border-box;
-  width: 45%;
   overflow: hidden;
 }
 
 section#about div.form_container {
-  margin-right: 10%;
   text-align: center;
   border: 1px solid @color_bright_grey;
   border-radius: 10px;
@@ -169,37 +157,16 @@ section#video h2,
 section#map h2,
 section#lecturers h2,
 section#about article h2 {
-  display: inline-block;
+  display: block;
+  margin: 0;
+  padding-bottom: 0.5em;
+  border-bottom: 1px solid @color_orange;
   color: @color_orange;
   position: relative;
 }
 
-section#video h2:after,
-section#map h2:after,
-section#lecturers h2:after,
-section#about article h2:after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  right: 105%;
-  width: 500px;
-  height: 1px;
-  transform: translatey(-50%);
-  background-color: @color_orange;
-}
-
-section#video h2:after,
-section#map h2:after,
-section#lecturers h2:after {
-  width: 1200px;
-}
-
-section#about article p {
-  font-size: 1.3em;
-}
-
-section#about article p:first-of-type {
-  margin-top: 0;
+section#about div.images {
+  padding: 0.5em 0em;
 }
 
 section#about article img {
@@ -211,57 +178,41 @@ section#about article img:nth-of-type(2) {
 }
 
 section#plan {
-  padding: 10em calc(~'(100% - 700px)' / 2);
-  background-image: url(../images/subject-background.jpg);
+  background-image: url(../images/mobile-subject.jpg);
   background-repeat: no-repeat;
   background-position: center top;
-  background-size: 1920px 500px;
+  background-size: 100% auto;
   text-align: center;
+}
+
+section#plan article {
+  padding: 1em;
+  background-color: fade(white, 80%);
 }
 
 section#plan h2 {
   color: @color_orange;
+  font-size: 1.5em;
 }
 
 section#plan p {
-  font-size: 1.3em;
-}
-
-/*
- * Lecturers list
- */
-
-section#video,
-section#map,
-section#lecturers {
-  padding: 0;
-  padding-bottom: 2em;
-  width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-  overflow: hidden;
-}
-
-section#map {
-  padding-bottom: 0;
+  font-size: 1em;
 }
 
 section#lecturers ul.features,
 section#lecturers ul.lecture {
   display: block;
   margin: 0;
-  padding: 0;
+  padding: 1.5em 0em;
+  text-align: center;
   list-style-type: none;
   position: relative;
-}
-
-section#lecturers ul.features {
-  padding-top: 4em;
 }
 
 section#lecturers ul.lecture li {
   display: inline-block;
   vertical-align: top;
+  margin-bottom: 1em;
   box-sizing: border-box;
   text-align: center;
   width: 280px;
@@ -269,16 +220,14 @@ section#lecturers ul.lecture li {
   color: white;
 }
 
-section#lecturers ul.lecture li {
-  margin-right: calc(~'(20px * 4) / 3');
-}
-
-section#lecturers ul.lecture li:nth-of-type(1) {
-  margin-right: 0;
+section#lecturers ul.lecture li:last-of-type {
+  margin-bottom: 0;
 }
 
 section#lecturers ul.lecture li h3 {
   margin: 0;
+  padding-bottom: 0.5em;
+  font-size: 1.2em;
 }
 
 section#lecturers ul.lecture li > p:first-of-type {
@@ -297,14 +246,6 @@ section#lecturers ul.lecture li a {
   transition: all 0.3s;
 }
 
-section#lecturers ul.lecture li a:hover {
-  color: @color_orange;
-}
-
-section#lecturers ul.lecture li a:hover svg {
-  fill: @color_orange;
-}
-
 section#lecturers ul.lecture li a svg {
   display: inline-block;
   vertical-align: middle;
@@ -318,62 +259,31 @@ section#lecturers ul.lecture li a svg {
 section#lecturers ul.lecture li a:hover + div.information {
   opacity: 1;
   visibility: visible;
-  transform: translate(-50%, -50%) scale(1);
+  max-height: 500px;
 }
 
 section#lecturers ul.lecture li div.information {
-  position: absolute;
   text-align: right;
   padding: 1em;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(0);
-  width: 600px;
   background-color: white;
-  -webkit-filter: drop-shadow(0px 0px 8px fade(@color_text, 30%));
-  color: @color_text;
-  z-index: 1;
+  max-height: 0;
   opacity: 0;
   visibility: hidden;
-  transition: all 0.5s;
+  color: @color_text;
+  transition: all 0.3s;
 }
-
-section#lecturers ul.lecture li div.information:before {
-  content: "";
-  position: absolute;
-  top: -1.5em;
-  right: 75px;
-  width: 3em;
-  height: 3em;
-  background-color: white;
-  transform: rotate(45deg);
-  z-index: -1;
-}
-
-/**
- * Features list
- */
 
 section#lecturers ul.features li {
-  display: inline-block;
-  vertical-align: top;
+  display: block;
+  margin-bottom: 2em;
   text-align: center;
   box-sizing: border-box;
-  width: 33.3%;
-}
-
-section#lecturers ul.features li:hover span {
-  border-radius: 0;
-}
-
-section#lecturers ul.features li:hover svg {
-  transform: rotate(360deg);
 }
 
 section#lecturers ul.features li span {
   display: block;
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: auto
+;  margin-right: auto;
   padding: 1em;
   width: 3em;
   height: 3em;
@@ -390,7 +300,8 @@ section#lecturers ul.features li span svg {
 }
 
 section#lecturers ul.features li h4 {
-  margin-bottom: 0;
+  margin: 0;
+  padding-top: 0.5em;
 }
 
 section#lecturers ul.features li p {
@@ -399,35 +310,31 @@ section#lecturers ul.features li p {
   color: @color_light_grey;
 }
 
-/**
- * Program list
- */
 ul#program {
   margin: 0;
-  padding: 0;
-  padding-top: 6em;
+  padding: 0em 3em;
   list-style-type: none;
+  overflow: hidden;
 }
 
 ul#program li {
-  display: inline-block;
-  vertical-align: top;
-  box-sizing: border-box;
+  display: block;
+  margin-bottom: 4em;
+  padding: 1em 0em;
   text-align: center;
-  width: 20%;
+  border: 1px solid @color_orange;
+  background-color: white;
   position: relative;
 }
 
-ul#program li:hover:before {
-  transform: translatex(-50%) scale(1.4);
-  background-color: @color_orange;
-  border-color: @color_light_grey;
+ul#program li:last-of-type {
+  margin-bottom: 0;
 }
 
 ul#program li:before {
   content: "";
   position: absolute;
-  top: -2em;
+  top: calc(~'(100% + 1.5em)');
   left: 50%;
   width: 1em;
   height: 1em;
@@ -441,11 +348,13 @@ ul#program li:before {
 ul#program li:first-of-type:after {
   content: "";
   position: absolute;
-  top: -1.5em;
-  right: calc(~'(50% + 0.5em)');
-  width: 960px;
-  height: 1px;
+  top: 100%;
+  left: 50%;
+  transform: translatex(-50%);
+  height: 960px;
+  width: 1px;
   background-color: @color_orange;
+  z-index: -1;
 }
 
 ul#program li h4,
@@ -462,22 +371,14 @@ ul#program li strong {
   padding: 0.2em 0em;
 }
 
-/**
- * Location articles
- */
-
 section#map img {
-  display: inline-block;
-  vertical-align: top;
-  width: 700px;
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 section#map div.location_container {
-  display: inline-block;
-  vertical-align: top;
-  padding-left: 1em;
-  box-sizing: border-box;
-  width: calc(~'(100% - 700px)');
+  display: block;
 }
 
 section#map div.location_container div {
@@ -522,6 +423,7 @@ a.waze svg {
 
 section#video div.video_wrap {
   text-align: center;
+  padding: 1em 0em;
 }
 
 section#gallery {
@@ -532,18 +434,17 @@ section#gallery {
 section#gallery a.image {
   display: inline-block;
   vertical-align: top;
-  height: 211px;
+  margin-left: 0.2em;
+  margin-right: 0.2em;
+  margin-bottom: 0.4em;
   overflow: hidden;
 }
 
-section#gallery a.image:hover img {
-  display: block;
-  transform: scale(1.2);
+section#gallery a.image img {
+  width: 150px;
+  height: 100px;
 }
 
-section#gallery a.image img {
-  transition: all 0.3s;
-}
 
 /**
  * Dialog form

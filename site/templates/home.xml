@@ -155,17 +155,33 @@
 			<!-- video section -->
 			<section id="video">
 				<h2><cms:text constant="title_video"/></h2>
-				<div class="video_wrap">
-					<cms:module
-						name="youtube"
-						action="show"
-						text_id="video"
-						embed="1"
-						width="650"
-						height="432"
-						enable_api="1"
-						/>
-				</div>
+				<cms:desktop>
+					<div class="video_wrap">
+						<cms:module
+							name="youtube"
+							action="show"
+							text_id="video"
+							embed="1"
+							width="650"
+							height="432"
+							enable_api="1"
+							/>
+					</div>
+				</cms:desktop>
+
+				<cms:mobile>
+					<div class="video_wrap">
+						<cms:module
+							name="youtube"
+							action="show"
+							text_id="video"
+							embed="1"
+							width="300"
+							height="200"
+							enable_api="1"
+							/>
+					</div>
+				</cms:mobile>
 			</section>
 
 			<!-- section gallery -->
