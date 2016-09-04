@@ -49,26 +49,29 @@ Site.is_mobile = function() {
  * Function called when document and images have been completely loaded.
  */
 Site.on_load = function() {
-	if (Site.is_mobile())
+	if (Site.is_mobile()) 
 		Site.mobile_menu = new Caracal.MobileMenu();
 
 	// create lightbox for gallery images
-	Site.lightbox = new LightBox('a.image', false, false, true);
+	if (!Site.is_mobile()) {
+		Site.lightbox = new LightBox('a.image', false, false, true);
 
-	// create dialog for form
-	Site.dialog = new Dialog();
-	Site.dialog
-		.setTitle(language_handler.getText(null, 'title_form'))
-		.addClass('custom')
-		.setContentFromDOM('div.dialog_form');
+		// create dialog for form
+		Site.dialog = new Dialog();
+		Site.dialog
+			.setTitle(language_handler.getText(null, 'title_form'))
+			.addClass('custom')
+			.setContentFromDOM('div.dialog_form');
 
-	// function for showing contact form
-	var action_links = document.querySelectorAll('a.action');
-	for(var i = 0; i < action_links.length; i++) {
-		action_links[i].addEventListener('click', function() {
-			Site.dialog.show();
-		})
-	}
+		// function for showing contact form
+		var action_links = document.querySelectorAll('a.action');
+		for(var i = 0; i < action_links.length; i++) {
+			action_links[i].addEventListener('click', function(event) {
+				event.preventDefault();
+				Site.dialog.show();
+			})
+		}
+	} 
 };
 
 
