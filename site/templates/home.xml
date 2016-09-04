@@ -17,7 +17,7 @@
 							<cms:svg file="site-sprite.svg" symbol="menu"/>
 						</a>
 						<h1><cms:text constant="title_mobile"/></h1>
-						<a href="javascript:void(0)" class="action"><cms:text constant=""/>
+						<a href="#form" class="action"><cms:text constant=""/>
 							<cms:text constant="label_action"/>
 						</a>
 					</div>
@@ -59,7 +59,7 @@
 			<section class="intro">
 				<img src="_BASEURL.'/site/images/logo.svg'"  alt="logo" cms:eval="src"/>
 				<p><cms:text constant="title"/></p>
-				<a href="javascript:void(0)" class="action">
+				<a href="#form" class="action">
 					<cms:text constant="label_action"/>
 				</a>
 			</section>
@@ -72,7 +72,7 @@
 					text_id="about"
 					template="parts/about.xml"
 					/>
-				<div class="form_container">
+				<div id="form" class="form_container">
 					<h4><cms:text constant="title_form"/></h4>
 					<span><cms:text constant="signup_notification"/></span>
 					<cms:module
@@ -194,16 +194,18 @@
 					/>
 			</section>
 
-			<!-- Dialog form -->
-			<div class="dialog_form">
-					<span><cms:text constant="signup_notification"/></span>
-					<cms:module
-						name="contact_form"
-						action="show"
-						text_id="contact"
-						/>
-					<span><cms:text constant="signup_notification2"/></span>
-			</div>
+			<!-- Dialog form for desktop version-->
+			<cms:desktop>
+				<div class="dialog_form">
+						<span><cms:text constant="signup_notification"/></span>
+						<cms:module
+							name="contact_form"
+							action="show"
+							text_id="contact"
+							/>
+						<span><cms:text constant="signup_notification2"/></span>
+				</div>
+			</cms:desktop>
 
 			<!-- Bottom section of the site -->
 			<footer>
@@ -212,7 +214,7 @@
 					<p><cms:text constant="title"/></p>
 					<div class="sign">
 						<span><cms:text constant="title_form"/></span>
-						<a href="javascript:void(0)" class="action">
+						<a href="#form" class="action">
 							<cms:text constant="label_action"/>
 						</a>
 					</div>
