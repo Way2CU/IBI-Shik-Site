@@ -287,7 +287,7 @@ section#lecturers ul.lecture li > p:first-of-type {
   padding-bottom: 1em;
 }
 
-section#lecturers ul.lecture li a {
+section#lecturers ul.lecture li > a {
   display: inline-block;
   vertical-align: middle;
   text-decoration: none;
@@ -315,7 +315,7 @@ section#lecturers ul.lecture li a svg {
   transition: all 0.3s;
 }
 
-section#lecturers ul.lecture li a:hover + div.information {
+section#lecturers ul.lecture li div.information.show {
   opacity: 1;
   visibility: visible;
   transform: translate(-50%, -50%) scale(1);
@@ -336,6 +336,13 @@ section#lecturers ul.lecture li div.information {
   opacity: 0;
   visibility: hidden;
   transition: all 0.5s;
+}
+
+section#lecturers ul.lecture li div.information a {
+  text-decoration: none;
+  color: @color_orange;
+  padding: 0.5em;
+  font-size: 1.5em;
 }
 
 section#lecturers ul.lecture li div.information:before {

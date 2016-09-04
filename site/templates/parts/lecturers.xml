@@ -8,7 +8,7 @@
     <h3><cms:var param="title" multilanguage="yes"/></h3>
     <cms:markdown param="description" multilanguage="yes"/>
 
-    <a href="javascript:void(0)">
+    <a class="information" href="javascript:void(0)">
       <cms:svg file="site-sprite.svg" symbol="info"/>
       <cms:text constant="additional_information"/>
     </a>
