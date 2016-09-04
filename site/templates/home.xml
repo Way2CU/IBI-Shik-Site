@@ -11,8 +11,23 @@
 
 		<body>
 			<header>
-				<h1><cms:text constant="title"/></h1>
-				<nav>
+				<cms:mobile>
+					<div class="mobile_title">
+						<a href="javascript:void(0)" class="menu">
+							<cms:svg file="site-sprite.svg" symbol="menu"/>
+						</a>
+						<h1><cms:text constant="title_mobile"/></h1>
+						<a href="javascript:void(0)" class="action"><cms:text constant=""/>
+							<cms:text constant="label_action"/>
+						</a>
+					</div>
+				</cms:mobile>
+
+				<cms:desktop>
+					<h1><cms:text constant="title"/></h1>
+				</cms:desktop>
+
+				<nav class="_MOBILE_VERSION ? 'mobile_menu' : false" cms:optional="class">
 					<a href="#about">
 						<cms:text constant="menu_about"/>
 					</a>
@@ -32,9 +47,12 @@
 						<cms:text constant="menu_gallery"/>
 					</a>
 				</nav>
-				<a href="javascript:void(0)" class="action"><cms:text constant=""/>
-					<cms:text constant="label_action"/>
-				</a>
+
+				<cms:desktop>
+					<a href="javascript:void(0)" class="action"><cms:text constant=""/>
+						<cms:text constant="label_action"/>
+					</a>
+				</cms:desktop>
 			</header>
 
 			<!-- section intro -->
