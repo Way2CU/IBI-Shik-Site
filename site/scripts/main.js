@@ -76,7 +76,7 @@ Site.on_load = function() {
 
 	// create lightbox for gallery images
 	if (!Site.is_mobile()) {
-		Site.lightbox = new LightBox('a.image', false, false, true);
+		Site.lightbox = new LightBox('section#gallery a.image', false, false, true);
 
 		// create dialog for form
 		Site.dialog = new Dialog();
