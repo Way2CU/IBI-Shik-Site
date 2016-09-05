@@ -102,23 +102,27 @@ Site.on_load = function() {
 		Site.lightbox = new LightBox('section#gallery a.image', false, false, true);
 
 		// create dialog for form
-		Site.dialog = new Dialog();
-		Site.dialog
+		Site.form_dialog = new Dialog();
+		Site.form_dialog
 			.setTitle(language_handler.getText(null, 'title_form'))
 			.addClass('custom')
 			.setContentFromDOM('div.dialog_form');
+
+		// create handler for submitting dialog form
+		Caracal.ContactForm.list[1].events.connect('submit-success', function() {
+			console.log(Site.form_dialog);
+		});
 
 		// function for showing contact form
 		var action_links = document.querySelectorAll('a.action');
 		for(var i = 0; i < action_links.length; i++) {
 			action_links[i].addEventListener('click', function(event) {
 				event.preventDefault();
-				Site.dialog.show();
+				Site.form_dialog.show();
 			})
 		}
-	} 
+	}
 };
-
 
 // connect document `load` event with handler function
 $(Site.on_load);
