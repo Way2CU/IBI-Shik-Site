@@ -62,18 +62,6 @@ Site.on_load = function() {
 	if (Site.is_mobile()) 
 		Site.mobile_menu = new Caracal.MobileMenu();
 
-	// create handler for information links
-	var information_links = document.querySelectorAll('a.information');
-	for(var i = 0; i <information_links.length; i++) {
-		information_links[i].addEventListener('click', Site.handle_information_link);
-	}
-
-	// create handler for closing information box
-	var button_close = document.querySelectorAll('a.close');
-	for(var i = 0; i <button_close.length; i++) {
-		button_close[i].addEventListener('click', Site.handle_close_information);
-	}
-
 	// Events
 	$('section#about form').on('analytics-event', function(event, data) {
 			if (!data.error)
@@ -90,16 +78,24 @@ Site.on_load = function() {
 				var position = self.attr("data-info");
 				if(position == 'header') {
 					dataLayer.push({'Category': 'השיק של השוק' ,'Action': 'רישום' ,'Label': 'קישור עליון' ,'event':'auto_event'});
-					console.log(position);
 				} else if (position == 'intro') {
 					dataLayer.push({'Category': 'השיק של השוק' ,'Action': 'רישום' ,'Label': 'קישור אמצעי' ,'event':'auto_event'});
-					console.log(position);
 				} else {
 					dataLayer.push({'Category': 'השיק של השוק' ,'Action': 'רישום' ,'Label': 'קישור תחתון' ,'event':'auto_event'});
-					console.log(position);
 				}
 		});
 
+	// create handler for information links
+	var information_links = document.querySelectorAll('a.information');
+	for(var i = 0; i <information_links.length; i++) {
+		information_links[i].addEventListener('click', Site.handle_information_link);
+	}
+
+	// create handler for closing information box
+	var button_close = document.querySelectorAll('a.close');
+	for(var i = 0; i <button_close.length; i++) {
+		button_close[i].addEventListener('click', Site.handle_close_information);
+	}
 
 	// create lightbox for gallery images
 	if (!Site.is_mobile()) {
