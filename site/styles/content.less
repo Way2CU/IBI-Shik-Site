@@ -581,3 +581,62 @@ div.dialog div.command_bar a {
   border: 1px solid @color_blue;
   color: @color_blue;
 }
+
+/**
+ * Tablet version
+ */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+
+header nav a {
+  padding: 2em 0.7em;
+}
+
+header h1 {
+  font-size: 1em;
+  padding-right: 0.5em;
+}
+
+header a.action {
+  left: 0.5em;
+}
+
+section.intro p {
+  width: 50%;
+}
+
+section {
+  padding: 2em calc(~'(100% - 900px)' / 2);
+}
+
+section#video,
+section#map,
+section#lecturers {
+  width: 900px;
+}
+
+section#lecturers ul.lecture {
+  padding: 0 calc(~'(100vw - 800px)' / 2);
+  text-align: center;
+}
+
+section#lecturers ul.lecture li:nth-of-type(1),
+section#lecturers ul.lecture li {
+  margin-right: 0.5em;
+  margin-left: 0.5em;
+  margin-bottom: 1em;
+}
+
+section#map div.location_container {
+  display: block;
+  padding: 0;
+  width: auto;
+}
+
+section#map img {
+  display: block;
+  margin-top: 2em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+}
