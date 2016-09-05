@@ -74,6 +74,33 @@ Site.on_load = function() {
 		button_close[i].addEventListener('click', Site.handle_close_information);
 	}
 
+	// Events
+	$('section#about form').on('analytics-event', function(event, data) {
+			if (!data.error)
+				dataLayer.push({'Category': 'השיק של השוק' ,'Action': 'רישום' ,'Label': 'טופס ראשי' ,'event':'auto_event'});
+		});
+
+	$('div.dialog_form form').on('analytics-event', function(event, data) {
+			if (!data.error)
+				dataLayer.push({'Category': 'השיק של השוק' ,'Action': 'רישום' ,'Label': 'טופס צף' ,'event':'auto_event'});
+		});
+
+	$('a.action').on('click', function() {
+				var self = $(this);
+				var position = self.attr("data-info");
+				if(position == 'header') {
+					dataLayer.push({'Category': 'השיק של השוק' ,'Action': 'רישום' ,'Label': 'קישור עליון' ,'event':'auto_event'});
+					console.log(position);
+				} else if (position == 'intro') {
+					dataLayer.push({'Category': 'השיק של השוק' ,'Action': 'רישום' ,'Label': 'קישור אמצעי' ,'event':'auto_event'});
+					console.log(position);
+				} else {
+					dataLayer.push({'Category': 'השיק של השוק' ,'Action': 'רישום' ,'Label': 'קישור תחתון' ,'event':'auto_event'});
+					console.log(position);
+				}
+		});
+
+
 	// create lightbox for gallery images
 	if (!Site.is_mobile()) {
 		Site.lightbox = new LightBox('section#gallery a.image', false, false, true);

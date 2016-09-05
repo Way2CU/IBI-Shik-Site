@@ -10,6 +10,9 @@
 		</head>
 
 		<body>
+			<!-- Google Analytics -->
+			<cms:raw file="parts/gtm.txt"/>
+			
 			<header>
 				<cms:mobile>
 					<div class="mobile_title">
@@ -17,7 +20,7 @@
 							<cms:svg file="site-sprite.svg" symbol="menu"/>
 						</a>
 						<h1><cms:text constant="title_mobile"/></h1>
-						<a href="#form" class="action"><cms:text constant=""/>
+						<a href="#form" class="action" data-info="header"><cms:text constant=""/>
 							<cms:text constant="label_action"/>
 						</a>
 					</div>
@@ -49,7 +52,7 @@
 				</nav>
 
 				<cms:desktop>
-					<a href="javascript:void(0)" class="action"><cms:text constant=""/>
+					<a href="javascript:void(0)" class="action" data-info="header"><cms:text constant=""/>
 						<cms:text constant="label_action"/>
 					</a>
 				</cms:desktop>
@@ -59,7 +62,7 @@
 			<section class="intro">
 				<img src="_BASEURL.'/site/images/logo.svg'"  alt="logo" cms:eval="src"/>
 				<p><cms:text constant="title"/></p>
-				<a href="#form" class="action">
+				<a href="#form" data-info="intro" class="action">
 					<cms:text constant="label_action"/>
 				</a>
 			</section>
@@ -214,7 +217,7 @@
 					<p><cms:text constant="title"/></p>
 					<div class="sign">
 						<span><cms:text constant="title_form"/></span>
-						<a href="#form" class="action">
+						<a href="#form" data-info="footer" class="action">
 							<cms:text constant="label_action"/>
 						</a>
 					</div>
