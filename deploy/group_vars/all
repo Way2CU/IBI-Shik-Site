@@ -1,6 +1,6 @@
 ---
 site:
-  domain: ashikshelhashuk.co.il
+  domain: hashikshelhashuk.co.il
   # subdomain: test
   # alias: domain.com
   root: httpdocs
