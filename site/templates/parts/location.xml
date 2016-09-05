@@ -11,7 +11,7 @@
       </a>
       <a 
         class="waze"
-        href="waze://?q=רחוב אחוזת בית 2 ,תל-אביב&amp;navigate=yes'"
+        href="waze://?q=אחוזת-בית2,תל-אביב&amp;navigate=yes'"
         target="_blank"
         >
         <cms:text constant="button_waze"/>
