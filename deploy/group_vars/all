@@ -1,10 +1,10 @@
 ---
 site:
-  domain: sample.com
+  domain: ashikshelhashuk.co.il
   # subdomain: test
   # alias: domain.com
   root: httpdocs
-  username: sample
+  username: shik
   caracal_branch: master
   # ip_address: 0.0.0.0
   # owner: Some Person
