@@ -12,7 +12,7 @@
 		<body>
 			<!-- Google Analytics -->
 			<cms:raw file="parts/gtm.txt"/>
-			
+			<cms:svg file="site-sprite.svg"/>
 			<header>
 				<cms:mobile>
 					<div class="mobile_title">
