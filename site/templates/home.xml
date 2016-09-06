@@ -102,29 +102,11 @@
 			<!-- section lecturers -->
 			<section id="lecturers">
 				<h2><cms:text constant="menu_lecturers"/></h2>
-				<cms:desktop>
-					<ul class="lecture">
-						<cms:module
-							name="gallery"
-							action="show_image_list"
-							group="lecturers"
-							template="parts/lecturers.xml"
-							/>
-					</ul>
-				</cms:desktop>
-
-				<cms:mobile>
 					<ul class="lecture">
 						<cms:module
 							name="gallery"
 							action="show_image"
 							text_id="gal"
-							template="parts/lecturers.xml"
-							/>
-						<cms:module
-							name="gallery"
-							action="show_image"
-							text_id="hagit"
 							template="parts/lecturers.xml"
 							/>
 						<cms:module
@@ -136,11 +118,16 @@
 						<cms:module
 							name="gallery"
 							action="show_image"
+							text_id="hagit"
+							template="parts/lecturers.xml"
+							/>
+						<cms:module
+							name="gallery"
+							action="show_image"
 							text_id="ela"
 							template="parts/lecturers.xml"
 							/>
 					</ul>
-				</cms:mobile>
 
 				<ul class="features">
 					<cms:module
