@@ -109,8 +109,9 @@ Site.on_load = function() {
 			.setContentFromDOM('div.dialog_form');
 
 		// create handler for submitting dialog form
-		Caracal.ContactForm.list[1].events.connect('submit-success', function() {
-			console.log(Site.form_dialog);
+		Caracal.ContactForm.list[1].events.connect('submit-success', function(event) {
+			Site.form_dialog.hide();
+			return true;
 		});
 
 		// function for showing contact form
