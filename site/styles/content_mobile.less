@@ -179,12 +179,17 @@ section#about div.images {
   padding: 0.5em 0em;
 }
 
-section#about article img {
+section#about article a {
+  display: inline-block;
   border: 1px solid @color_bright_grey;
 }
 
-section#about article img:nth-of-type(2) {
+section#about article a:nth-of-type(2) {
   margin: 0em 0.5em;
+}
+
+section#about article img {
+  display: block;
 }
 
 section#plan {

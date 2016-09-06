@@ -105,6 +105,7 @@ Site.on_load = function() {
 		Site.form_dialog = new Dialog();
 		Site.form_dialog
 			.setTitle(language_handler.getText(null, 'title_form'))
+			.setClearOnClose(false)
 			.addClass('custom')
 			.setContentFromDOM('div.dialog_form');
 

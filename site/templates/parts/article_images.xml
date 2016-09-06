@@ -1,7 +1,9 @@
 <document>
-  <img 
-    src="gallery::getThumbnailById($params['id'], null, _DESKTOP_VERSION ? 100 : 50, Thumbnail::CONSTRAIN_WIDTH)" 
-    alt="$params['title'][$language]"
-    cms:eval="src,alt"
-    />
+  <a href="$params['description'][$language]" cms:eval="href">
+    <img 
+      src="gallery::getThumbnailById($params['id'], null, _DESKTOP_VERSION ? 100 : 50, Thumbnail::CONSTRAIN_WIDTH)" 
+      alt="$params['title'][$language]"
+      cms:eval="src,alt"
+      />
+  </a>
 </document>
