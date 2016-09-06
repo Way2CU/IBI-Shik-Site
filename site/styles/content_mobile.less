@@ -192,7 +192,7 @@ section#plan {
   background-image: url(../images/mobile-subject.jpg);
   background-repeat: no-repeat;
   background-position: center top;
-  background-size: 115% auto;
+  background-size: 100% auto;
   text-align: center;
 }
 
@@ -232,14 +232,11 @@ section#lecturers ul.lecture li {
   text-align: center;
   background-color: @color_blue;
   color: white;
+  width: 280px;
 }
 
 section#lecturers ul.lecture li:last-of-type {
   margin-bottom: 0;
-}
-
-section#lecturers ul.lecture li img {
-  padding-top: 1em;
 }
 
 section#lecturers ul.lecture li h3 {
@@ -278,17 +275,21 @@ section#lecturers ul.lecture li div.information.show {
   opacity: 1;
   visibility: visible;
   max-height: 500px;
+  padding: 0;
 }
 
 section#lecturers ul.lecture li div.information {
   text-align: right;
-  padding: 1em;
   background-color: white;
   max-height: 0;
   opacity: 0;
   visibility: hidden;
   color: @color_text;
   transition: all 0.3s;
+}
+
+section#lecturers ul.lecture li div.information p {
+  margin: 0;
 }
 
 section#lecturers ul.lecture li div.information strong {
