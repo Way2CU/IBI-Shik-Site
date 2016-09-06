@@ -63,27 +63,27 @@ Site.on_load = function() {
 		Site.mobile_menu = new Caracal.MobileMenu();
 
 	// Events
-	$('section#about form').on('analytics-event', function(event, data) {
-			if (!data.error)
-				dataLayer.push({'Category': 'השיק של השוק' ,'Action': 'רישום' ,'Label': 'טופס ראשי' ,'event':'auto_event'});
-		});
-
-	$('div.dialog_form form').on('analytics-event', function(event, data) {
-			if (!data.error)
-				dataLayer.push({'Category': 'השיק של השוק' ,'Action': 'רישום' ,'Label': 'טופס צף' ,'event':'auto_event'});
-		});
+	Caracal.ContactForm.list[0].events.connect('submit-success', function(data) {
+		dataLayer.push({'Category': 'השיק של השוק' ,'Action': 'רישום' ,'Label': 'טופס ראשי' ,'event':'auto_event'});
+		return true;
+    });
+ 
+Caracal.ContactForm.list[1].events.connect('submit-success', function(data) {
+		dataLayer.push({'Category': 'השיק של השוק' ,'Action': 'רישום' ,'Label': 'טופס צף' ,'event':'auto_event'});
+		return true;
+    });
 
 	$('a.action').on('click', function() {
-				var self = $(this);
-				var position = self.attr("data-info");
-				if(position == 'header') {
-					dataLayer.push({'Category': 'השיק של השוק' ,'Action': 'רישום' ,'Label': 'קישור עליון' ,'event':'auto_event'});
-				} else if (position == 'intro') {
-					dataLayer.push({'Category': 'השיק של השוק' ,'Action': 'רישום' ,'Label': 'קישור אמצעי' ,'event':'auto_event'});
-				} else {
-					dataLayer.push({'Category': 'השיק של השוק' ,'Action': 'רישום' ,'Label': 'קישור תחתון' ,'event':'auto_event'});
-				}
-		});
+		var self = $(this);
+		var position = self.attr("data-info");
+		if(position == 'header') {
+			dataLayer.push({'Category': 'השיק של השוק' ,'Action': 'מעבר לרישום' ,'Label': 'קישור עליון' ,'event':'auto_event'});
+		} else if (position == 'intro') {
+			dataLayer.push({'Category': 'השיק של השוק' ,'Action': 'מעבר לרישום','Label': 'קישור אמצעי' ,'event':'auto_event'});
+		} else {
+			dataLayer.push({'Category': 'השיק של השוק' ,'Action': 'מעבר לרישום','Label': 'קישור תחתון' ,'event':'auto_event'});
+		}
+	});
 
 	// create handler for information links
 	var information_links = document.querySelectorAll('a.information');
