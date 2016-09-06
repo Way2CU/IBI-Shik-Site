@@ -216,7 +216,7 @@ section#about article img {
 }
 
 section#plan {
-  padding: 10em calc(~'(100% - 700px)' / 2);
+  padding: 10em calc(~'(100% - 800px)' / 2);
   background-image: url(../images/subject-background.jpg);
   background-repeat: no-repeat;
   background-position: center top;
@@ -258,6 +258,7 @@ section#lecturers ul.lecture {
   padding: 0;
   list-style-type: none;
   position: relative;
+  text-align: center;
 }
 
 section#lecturers ul.features {
@@ -267,19 +268,13 @@ section#lecturers ul.features {
 section#lecturers ul.lecture li {
   display: inline-block;
   vertical-align: top;
+  margin-left: 10px;
+  margin-right: 10px;
   box-sizing: border-box;
   text-align: center;
   width: 280px;
   background-color: @color_blue;
   color: white;
-}
-
-section#lecturers ul.lecture li {
-  margin-right: calc(~'(20px * 4) / 3');
-}
-
-section#lecturers ul.lecture li:nth-of-type(1) {
-  margin-right: 0;
 }
 
 section#lecturers ul.lecture li h3 {
@@ -401,7 +396,7 @@ section#lecturers ul.features li h4 {
 section#lecturers ul.features li p {
   margin: 0;
   padding: 0em 3em;
-  color: @color_light_grey;
+  color: @color_grey;
 }
 
 /**
@@ -459,7 +454,7 @@ ul#program li p {
 }
 
 ul#program li h4 {
-  color: @color_light_grey;
+  color: @color_grey;
 }
 
 ul#program li strong {
