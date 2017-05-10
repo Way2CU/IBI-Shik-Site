@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE document SYSTEM "../units/schema/language.dtd">
 <document>
-	<cms:var name="_DOCTYPE"/>
 	<html lang="$language" dir="$language_rtl ? 'rtl' : 'ltr'" cms:eval="lang,dir">
 		<head>
 			<title><cms:text constant="site_title"/></title>
@@ -147,6 +146,7 @@
 						name="articles"
 						action="show_list"
 						group="program"
+						order_by="text_id"
 						template="stock/features_generic.xml"
 						>
 						<param name="title" value=""/>
@@ -166,8 +166,8 @@
 						template="parts/location.xml"
 						/>
 				</div>
-				<img 
-					src="_BASEURL.'/site/images/map.jpg'"  
+				<img
+					src="_BASEURL.'/site/images/map.jpg'"
 					alt="map"
 					cms:eval="src"
 					/>
