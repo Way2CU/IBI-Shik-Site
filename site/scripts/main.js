@@ -59,7 +59,7 @@ Site.handle_close_information = function() {
  * Function called when document and images have been completely loaded.
  */
 Site.on_load = function() {
-	if (Site.is_mobile()) 
+	if (Site.is_mobile())
 		Site.mobile_menu = new Caracal.MobileMenu();
 
 	// Events
@@ -67,11 +67,12 @@ Site.on_load = function() {
 		dataLayer.push({'Category': 'השיק של השוק' ,'Action': 'רישום' ,'Label': 'טופס ראשי' ,'event':'auto_event'});
 		return true;
     });
- 
-Caracal.ContactForm.list[1].events.connect('submit-success', function(data) {
-		dataLayer.push({'Category': 'השיק של השוק' ,'Action': 'רישום' ,'Label': 'טופס צף' ,'event':'auto_event'});
-		return true;
-    });
+
+	if(!Site.is_mobile())
+		Caracal.ContactForm.list[1].events.connect('submit-success', function(data) {
+				dataLayer.push({'Category': 'השיק של השוק' ,'Action': 'רישום' ,'Label': 'טופס צף' ,'event':'auto_event'});
+				return true;
+		    });
 
 	$('a.action').on('click', function() {
 		var self = $(this);
