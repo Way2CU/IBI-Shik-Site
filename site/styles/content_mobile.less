@@ -163,7 +163,6 @@ div.dialog_form form div.controls button {
   padding: 1em 1.5em;
 }
 
-section#video h2,
 section#map h2,
 section#lecturers h2,
 section#about article h2 {
@@ -457,14 +456,25 @@ a.waze svg {
   height: 2em;
 }
 
-section#video div.video_wrap {
-  text-align: center;
-  padding: 1em 0em;
-}
-
 section#gallery {
   padding: 0;
   text-align: center;
+
+  h2 {
+    text-align: center;
+    margin: 0;
+    padding: 1em 0;
+    color: @color_orange;
+
+    &:after {
+      content: '';
+      display: block;
+      width: 90%;
+      height: 2px;
+      background-color: @color_orange;
+      margin: 0 auto;
+    }
+  }
 }
 
 section#gallery a.image {
