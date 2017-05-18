@@ -165,7 +165,6 @@ div.dialog_form form div.controls button {
   padding: 1em 1.5em;
 }
 
-section#video h2,
 section#map h2,
 section#lecturers h2,
 section#about article h2 {
@@ -174,7 +173,6 @@ section#about article h2 {
   position: relative;
 }
 
-section#video h2:after,
 section#map h2:after,
 section#lecturers h2:after,
 section#about article h2:after {
@@ -188,7 +186,6 @@ section#about article h2:after {
   background-color: @color_orange;
 }
 
-section#video h2:after,
 section#map h2:after,
 section#lecturers h2:after {
   width: 1200px;
@@ -236,7 +233,6 @@ section#plan p {
  * Lecturers list
  */
 
-section#video,
 section#map,
 section#lecturers {
   padding: 0;
@@ -520,13 +516,29 @@ a.waze svg {
   height: 2em;
 }
 
-section#video div.video_wrap {
-  text-align: center;
-}
-
 section#gallery {
-  padding: 0;
+  padding: 1em calc(~'(100% - 1200px)' / 2);
   text-align: center;
+
+  h2 {
+    text-align: initial;
+    color: @color_orange;
+    background-color: white;
+    position: relative;
+    margin: 0;
+    padding: 1em 0;
+
+    &:before {
+      content: '';
+
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 70%;
+      height: 2px;
+      background-color: @color_orange;
+    }
+  }
 }
 
 section#gallery a.image {
@@ -534,6 +546,11 @@ section#gallery a.image {
   vertical-align: top;
   height: 211px;
   overflow: hidden;
+  margin-bottom: 1em;
+}
+
+section#gallery a.image:nth-of-type(3n + 2) {
+  margin: 0em 1em;
 }
 
 section#gallery a.image:hover img {
@@ -600,12 +617,6 @@ section.intro p {
 
 section {
   padding: 2em calc(~'(100% - 900px)' / 2);
-}
-
-section#video,
-section#map,
-section#lecturers {
-  width: 900px;
 }
 
 section#lecturers ul.lecture {
