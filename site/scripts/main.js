@@ -112,7 +112,7 @@ Site.on_load = function() {
 
 		// create handler for submitting dialog form
 		Caracal.ContactForm.list[1].events.connect('submit-success', function(event) {
-			Site.form_dialog.hide();
+			Site.form_dialog.close();
 			return true;
 		});
 
@@ -121,7 +121,7 @@ Site.on_load = function() {
 		for(var i = 0; i < action_links.length; i++) {
 			action_links[i].addEventListener('click', function(event) {
 				event.preventDefault();
-				Site.form_dialog.show();
+				Site.form_dialog.open();
 			})
 		}
 	}
