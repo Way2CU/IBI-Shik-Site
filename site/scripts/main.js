@@ -103,12 +103,12 @@ Site.on_load = function() {
 		Site.lightbox = new LightBox('section#gallery a.image', false, false, true);
 
 		// create dialog for form
-		Site.form_dialog = new Dialog();
+		Site.form_dialog = new Caracal.Dialog();
 		Site.form_dialog
-			.setTitle(language_handler.getText(null, 'title_form'))
-			.setClearOnClose(false)
-			.addClass('custom')
-			.setContentFromDOM('div.dialog_form');
+			.set_title(language_handler.getText(null, 'title_form'))
+			.set_clear_on_close(false)
+			.add_class('custom')
+			.set_content_from_dom('div.dialog_form');
 
 		// create handler for submitting dialog form
 		Caracal.ContactForm.list[1].events.connect('submit-success', function(event) {
