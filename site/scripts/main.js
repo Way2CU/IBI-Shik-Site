@@ -59,6 +59,32 @@ Site.handle_close_information = function() {
  * Function called when document and images have been completely loaded.
  */
 Site.on_load = function() {
+		function getQueryVariable(variable)
+		{
+		       var query = window.location.search.substring(1);
+		       var vars = query.split("&");
+		       for (var i=0;i<vars.length;i++) {
+		               var pair = vars[i].split("=");
+		               if(pair[0] == variable){return pair[1];}
+		       }
+		       return(false);
+		}
+	if (getQueryVariable("utm_source")){
+		document.querySelector("input[name='utm_source']").value = getQueryVariable("utm_source");
+	}
+	if (getQueryVariable("utm_medium")){
+		document.querySelector("input[name='utm_medium']").value = getQueryVariable("utm_medium");
+	}
+	if (getQueryVariable("utm_campaign")){
+		document.querySelector("input[name='utm_campaign']").value = getQueryVariable("utm_campaign");
+	}
+	if (getQueryVariable("utm_term")){
+		document.querySelector("input[name='utm_term']").value = getQueryVariable("utm_term");
+	}
+	if (getQueryVariable("utm_content")){
+		document.querySelector("input[name='utm_content']").value = getQueryVariable("utm_content");
+	}
+
 	if (Site.is_mobile())
 		Site.mobile_menu = new Caracal.MobileMenu();
 
