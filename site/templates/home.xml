@@ -101,32 +101,15 @@
 			<!-- section lecturers -->
 			<section id="lecturers">
 				<h2><cms:text constant="menu_lecturers"/></h2>
-					<ul class="lecture">
-						<cms:module
-							name="gallery"
-							action="show_image"
-							text_id="gal"
-							template="parts/lecturers.xml"
-							/>
-						<cms:module
-							name="gallery"
-							action="show_image"
-							text_id="adi"
-							template="parts/lecturers.xml"
-							/>
-						<cms:module
-							name="gallery"
-							action="show_image"
-							text_id="hagit"
-							template="parts/lecturers.xml"
-							/>
-						<cms:module
-							name="gallery"
-							action="show_image"
-							text_id="ela"
-							template="parts/lecturers.xml"
-							/>
-					</ul>
+				<ul class="lecture">
+					<cms:module
+						name="gallery"
+						action="show_image_list"
+						group="lecturers"
+						order_by="text_id"
+						template="parts/lecturers.xml"
+						/>
+				</ul>
 
 				<ul class="features">
 					<cms:module
